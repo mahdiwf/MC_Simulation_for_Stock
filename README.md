@@ -51,6 +51,7 @@ Comparing VaR (Historical, Parametric, and Monte Carlo).<br>
 
 **Conclusion:**<br>
 I think Monte Carlo Simulation is a great tool to analyze a probabilistic view of future stock prices/other events.<br>
+Based on this simulation, for this stock:
   1) The upside potential (reward) is higher than the downside potential (risk)
   2) There is about 37% that AAPL will return more than 12% in a year.
   3) The downside potential (VaR and CVaR) is about 8-20% of the initial investment value depending on the confidence levels.

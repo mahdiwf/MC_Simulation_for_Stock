@@ -14,8 +14,8 @@ Today is Saturday, June 15th, 2024. After reading the above articles, I am wonde
 **Should I invest in AAPL? What is the chance of returns of 12% in a year?** <br>
 **Is there a potential loss? How much is that?** <br>
 
-This project is for me to learn to answer those questions. I will use:<br>
-**Monte Carlo Simulation** to:
+This project is for me to learn to answer those questions. I briefly learned Monte Carlo Simulation in my junior Numerical Analysis class.<br>
+So, I will use **Monte Carlo Simulation** to:
 * Simulate AAPL future prices (portfolio values).
 * Risk Analysis (VaR & CVaR Calculation).
 
@@ -28,8 +28,9 @@ The daily price percentages returns
 Using this percentage returns distribution statistical properties (median & standard deviation), I simulated daily returns for the next 252 trading days. Add these simulated daily returns to the last prices (of each calculation), and I get a simulated stock price (a random walk).
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/0e92e697-984a-4b9a-bb5f-003c2712577e)
 
-Iterating the above process for a few thousand times, I got the following.<br>
-![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/efb6a086-176a-42e1-b4df-313d609a3295)
+Iterating the above process 10000 times, I got 10000 price paths/random walks.<br>
+![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/efb6a086-176a-42e1-b4df-313d609a3295) <br>
+The upside potential is about 300 (500 - 200), and the downside potential is about 80 (200 - 120).
 
 From this simulation, I also calculated the VaR & CVaR.<br>
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/af3ae1c5-e870-4a0e-85fe-8a693ddcc45d)
@@ -43,13 +44,16 @@ From the simulation result, I can get the probability of achieving the 12% retur
 >probability_of_success = num_success / num_simulations
 >print(f"Probability of achieving at least a {desired_return*100}% return: {probability_of_success*100:.2f}%")
 
-Probability of achieving at least a 12.0% return: 36.98%. <br>
+Probability of achieving at least a 12.0% return: **36.98%**. <br>
 
 Comparing VaR (Historical, Parametric, and Monte Carlo).<br>
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/3528bfcd-ef2c-47f3-9640-9c4d5a1f066b)
 
 **Conclusion:**<br>
 I think Monte Carlo Simulation is a great tool to analyze a probabilistic view of future stock prices/other events.<br>
-There is about 37% that AAPL will return more than 12% in a year. The downside potential (VaR and CVaR) is about 8-20% of the initial investment value depend on the confidence levels.<br>
-Since this project is my first time calculating VaR & CVaR, I have no idea how to conclude from these results.<br>
+  1) The upside potential (reward) is higher than the downside potential (risk)
+  2) There is about 37% that AAPL will return more than 12% in a year.
+  3) The downside potential (VaR and CVaR) is about 8-20% of the initial investment value depending on the confidence levels.
+
+Since this project is my first time calculating VaR & CVaR, I have yet to learn to make decisions based on these results.
 However, I think I will not buy a stock solely based on Monte Carlo Simulation.

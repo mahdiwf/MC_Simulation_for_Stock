@@ -14,7 +14,7 @@ Today is Saturday, June 15th, 2024. After reading the above articles, I am wonde
 **Should I invest in AAPL? What is the chance of returns of 12% in a year?** <br>
 **Is there a potential loss? How much is that?** <br>
 
-This project is for me to learn to answer those questions. I briefly learned Monte Carlo Simulation in my junior Numerical Analysis class.<br>
+This project is for me to learn to answer those questions. I briefly learned Monte Carlo Simulation in my junior year *Numerical Analysis* class.<br>
 So, I will use **Monte Carlo Simulation** to:
 * Simulate AAPL future prices (portfolio values).
 * Risk Analysis (VaR & CVaR Calculation).
@@ -58,3 +58,13 @@ Based on this simulation, for this stock:
 
 Since this project is my first time calculating VaR & CVaR, I have yet to learn to make decisions based on these results.
 However, I think I will not buy a stock solely based on Monte Carlo Simulation.
+
+*References*: <br>
+https://math.gmu.edu/~tsauer/ (Numerical Analisys textbook)<br>
+https://pbpython.com/monte-carlo.html <br>
+https://medium.com/@whystudying/monte-carlo-simulation-with-python-13e09731d500 <br>
+https://www.interviewqs.com/blog/intro-monte-carlo <br>
+https://www.investopedia.com/terms/m/montecarlosimulation.asp <br>
+https://stats.libretexts.org/Bookshelves/Computing_and_Modeling/RTG%3A_Simulating_High_Dimensional_Data/The_Monte_Carlo_Simulation_Method <br>
+https://blog.quantinsti.com/value-at-risk/ <br>
+https://github.com/quantrocket-codeload/quant-finance-lectures/tree/master/quant_finance_lectures

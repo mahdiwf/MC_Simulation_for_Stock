@@ -38,10 +38,10 @@ From this simulation, I also calculated the VaR & CVaR.<br>
 The distribution of simulated portfolio returns and VaR threshold
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/afc49e2c-8074-4243-baae-b4704aac1a15)
 
-From the simulation result, I can get the probability of achieving the 12% return.
->desired_return = 0.12  #Desired return (12%)
->num_success = np.sum(sim_port_avg >= initial_investment * (1 + desired_return))
->probability_of_success = num_success / num_simulations
+From the simulation result, I can get the probability of achieving the 12% return as below:
+>desired_return = 0.12  #Desired return (12%) <br>
+>num_success = np.sum(sim_port_avg >= initial_investment * (1 + desired_return)) <br>
+>probability_of_success = num_success / num_simulations <br>
 >print(f"Probability of achieving at least a {desired_return*100}% return: {probability_of_success*100:.2f}%")
 
 Probability of achieving at least a 12.0% return: **36.98%**. <br>

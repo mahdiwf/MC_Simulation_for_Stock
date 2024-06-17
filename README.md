@@ -25,7 +25,7 @@ Apple stock price for the last 252 trading days.<br>
 The daily price percentages returns
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/8b821e7d-3b02-4d53-9279-4901ae9c90a6)
 
-Using this percentage returns distribution statistical properties (median & standard deviation), I simulated daily returns for the next 252 trading days. Add these simulated daily returns to the last prices (of each calculation), and I get a simulated stock price (a random walk).
+Using this percentage returns distribution statistical properties (median & standard deviation) to generate random numbers (using numpy.random.normal), I simulated daily returns for the next 252 trading days. Add these simulated daily returns to the last prices (of each calculation), and I get a simulated stock price (a random walk).
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/0e92e697-984a-4b9a-bb5f-003c2712577e)
 
 Iterating the above process 10000 times, I got 10000 price paths/random walks.<br>
@@ -34,6 +34,8 @@ The upside potential is about 300 (500 - 200), and the downside potential is abo
 
 From this simulation, I also calculated the VaR & CVaR.<br>
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/af3ae1c5-e870-4a0e-85fe-8a693ddcc45d)
+
+By looking at a confidence level of 95% (blue line), the simulation tells me that AAPL has a 5% probability of losing its value by $12,409 in the upcoming days. <br>
 
 The distribution of simulated portfolio returns and VaR threshold
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/afc49e2c-8074-4243-baae-b4704aac1a15)
@@ -48,6 +50,10 @@ Probability of achieving at least a 12.0% return: **36.98%**. <br>
 
 Comparing VaR (Historical, Parametric, and Monte Carlo).<br>
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/3528bfcd-ef2c-47f3-9640-9c4d5a1f066b)
+
+A 95% CVaR of $16,374 means that the expected loss of the worst 5% scenarios is $16,374. <br>
+The Monte Carlo Simulation generated VaRs are slightly higher when the confidence level is higher. <br>
+However, I have no experience to justify if these variabilities are normal or acceptable.
 
 **Conclusion:**<br>
 I think Monte Carlo Simulation is a great tool to analyze a probabilistic view of future stock prices/other events.<br>

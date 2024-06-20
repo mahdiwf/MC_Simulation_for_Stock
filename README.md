@@ -1,5 +1,5 @@
 # MC_Simulation_for_Stock
-Using Monte Carlo Simulation to evaluate upside and downside (risk) potential of a stock
+Using Monte Carlo Simulation to evaluate upside (profit) and downside (risk) potential of a stock
 
 *Apple is now the most valuable US public company* By Krystal Hur, CNN Thu June 13, 2024 <br>
 https://edition.cnn.com/2024/06/13/investing/apple-microsoft-market-cap-nvidia/index.html <br>
@@ -56,14 +56,15 @@ The Monte Carlo Simulation generated VaRs are slightly higher when the confidenc
 However, I have no experience to justify if these variabilities are normal or acceptable.
 
 **Conclusion:**<br>
-I think Monte Carlo Simulation is a great tool to analyze a probabilistic view of future stock prices/other events.<br>
-Based on this simulation, for this stock:
-  1) The upside potential (reward) is higher than the downside potential (risk)
+I think Monte Carlo Simulation (MCS) is a great tool to analyze a probabilistic view of future stock prices/other events that are subject to uncertainty.
+With MCS, I can quantify the uncertainty into a probabilistic representation and scenarios that help plan if certain things occur.<br>
+Based on this simulation, for this AAPL stock:
+  1) The upside potential (profit) is higher than the downside potential (risk)
   2) There is about 37% that AAPL will return more than 12% in a year.
   3) The downside potential (VaR and CVaR) is about 8-20% of the initial investment value depending on the confidence levels.
 
-Since this project is my first time calculating VaR & CVaR, I have yet to learn to make decisions based on these results.
-However, I think I will not buy a stock solely based on Monte Carlo Simulation.
+Since the probability of profit is higher than the probability of loss, I think AAPL is a good buy. However, this project is my first time calculating VaR & CVaR, I have yet to learn to make decisions based on these combined results.
+However, I think I will not buy a stock solely based on Monte Carlo Simulation result. It will work as supporting information.
 
 *References*: <br>
 https://math.gmu.edu/~tsauer/ (Numerical Analisys textbook)<br>

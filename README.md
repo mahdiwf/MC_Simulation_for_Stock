@@ -19,6 +19,10 @@ So, I will use **Monte Carlo Simulation** to:
 * Simulate AAPL future prices (portfolio values).
 * Risk Analysis (VaR & CVaR Calculation).
 
+Note: <br>
+* In this MCS simulation, the volatility is assumed constant. Random prices are generated using the previous 252-day standard deviation. In real stock prices, volatility changes over time.
+* In the real stock market, stock prices often show jumps caused by unpredictable events or news, but in this simulation, the path is continuous (no discontinuity).
+
 Apple stock price for the last 252 trading days.<br>
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/28b3c2e1-c9ca-4ec5-8d1e-7598ada75965)
 
@@ -35,7 +39,8 @@ The upside potential is about 300 (500 - 200), and the downside potential is abo
 From this simulation, I also calculated the VaR & CVaR.<br>
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/af3ae1c5-e870-4a0e-85fe-8a693ddcc45d)
 
-By looking at a confidence level of 95% (blue line), the simulation tells me that AAPL has a 5% probability of losing its value by $12,409 in the upcoming days. <br>
+This result is the same shape as the simulated price above (investment value depends on price). I added the VaR line for each confidence levels. <br>
+If we focus on the blue line: there is 95% confidence that the worst daily loss will not exceed $12,409 or the asset has a  5% probability of losing its value by $12,409 in the upcoming days.<br>
 
 The distribution of simulated portfolio returns and VaR threshold
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/afc49e2c-8074-4243-baae-b4704aac1a15)

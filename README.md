@@ -19,7 +19,7 @@ So, I will use **Monte Carlo Simulation** to:
 * Simulate AAPL future prices (portfolio values).
 * Risk Analysis (VaR & CVaR Calculation).
 
-Note: <br>
+Assumptions: <br>
 * In this MCS simulation, the volatility is assumed constant. Random prices are generated using the previous 252-day standard deviation. In real stock prices, volatility changes over time.
 * In the real stock market, stock prices often show jumps caused by unpredictable events or news, but in this simulation, the path is continuous (no discontinuity).
 

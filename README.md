@@ -23,13 +23,14 @@ Assumptions: <br>
 * In this MCS simulation, the volatility is assumed constant. Random prices are generated using the previous 252-day standard deviation. In real stock prices, volatility changes over time.
 * In the real stock market, stock prices often show jumps caused by unpredictable events or news, but in this simulation, the path is continuous (no discontinuity).
 
-Apple stock price for the last 252 trading days.<br>
+I will start by showing Apple stock price for the last 252 trading days.<br>
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/28b3c2e1-c9ca-4ec5-8d1e-7598ada75965)
 
 The daily price percentages returns
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/8b821e7d-3b02-4d53-9279-4901ae9c90a6)
 
-Using this percentage returns distribution statistical properties (median & standard deviation) to generate random numbers (using numpy.random.normal), I simulated daily returns for the next 252 trading days. Add these simulated daily returns to the last prices (of each calculation), and I get a simulated stock price (a random walk).
+Using this percentage returns distribution statistical properties (median & standard deviation) to generate random numbers (using numpy.random.normal), I simulated daily returns for the next 252 trading days. Add these simulated daily returns to the last prices (of each calculation), and I get a randomly simulated stock price - a random walk i.e. the price of AAPL moves randomly.
+
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/0e92e697-984a-4b9a-bb5f-003c2712577e)
 
 Iterating the above process 10000 times, I got 10000 price paths/random walks.<br>
@@ -40,7 +41,7 @@ From this simulation, I also calculated the VaR & CVaR.<br>
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/af3ae1c5-e870-4a0e-85fe-8a693ddcc45d)
 
 This result is the same shape as the simulated price above (investment value depends on price). I added the VaR line for each confidence levels. <br>
-If we focus on the blue line: there is 95% confidence that the worst daily loss will not exceed $12,409 or the asset has a  5% probability of losing its value by $12,409 in the upcoming days.<br>
+If we focus on the blue line (95% confidence level): there is 95% confidence that the worst daily loss will not exceed $12,409 or the asset has a  5% probability of losing its value by $12,409 in the upcoming days.<br>
 
 The distribution of simulated portfolio returns and VaR threshold
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/afc49e2c-8074-4243-baae-b4704aac1a15)
@@ -79,4 +80,5 @@ https://www.interviewqs.com/blog/intro-monte-carlo <br>
 https://www.investopedia.com/terms/m/montecarlosimulation.asp <br>
 https://stats.libretexts.org/Bookshelves/Computing_and_Modeling/RTG%3A_Simulating_High_Dimensional_Data/The_Monte_Carlo_Simulation_Method <br>
 https://blog.quantinsti.com/value-at-risk/ <br>
-https://github.com/quantrocket-codeload/quant-finance-lectures/tree/master/quant_finance_lectures
+https://github.com/quantrocket-codeload/quant-finance-lectures/tree/master/quant_finance_lectures <br>
+https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/what-is-the-random-walk-theory <br>

@@ -37,14 +37,23 @@ Iterating the above process 10000 times, I got 10000 price paths/random walks.<b
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/efb6a086-176a-42e1-b4df-313d609a3295) <br>
 The upside potential is about 300 (500 - 200), and the downside potential is about 80 (200 - 120).
 
-From this simulation, I also calculated the VaR & CVaR.<br>
+With an initial investment value of 100000, I simulated the investment values using the price simulation/paths above.<br>
+In this simulation, I also calculated the VaR (VaR line below) & CVaR (or ES/Expected Shortfall).<br>
+VaR is the estimation of the maximum potential loss at specific confidence level.
+CVaR/ES = the expected loss that exceed VaR threshold.
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/af3ae1c5-e870-4a0e-85fe-8a693ddcc45d)
 
-This result is the same shape as the simulated price above (investment value depends on price). I added the VaR line for each confidence levels. <br>
 If we focus on the blue line (95% confidence level): there is 95% confidence that the worst daily loss will not exceed $12,409 or the asset has a  5% probability of losing its value by $12,409 in the upcoming days.<br>
 
 The distribution of simulated portfolio returns and VaR threshold
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/afc49e2c-8074-4243-baae-b4704aac1a15)
+
+Comparing VaR (Historical, Parametric, and Monte Carlo).<br>
+![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/3528bfcd-ef2c-47f3-9640-9c4d5a1f066b)
+
+A 95% CVaR of $16,374 means that the expected loss (expected shortfall) of the worst 5% scenarios is $16,374. My understanding is this is the total amount of investment values that fall inside the area of Alpha = 5% in graph above. <br>
+
+With compared with Historical VaR & Parametric VaR, the Monte Carlo Simulation generated VaRs are slightly higher when the confidence level is higher. However, I have no experience to justify if these variabilities are normal or acceptable.<br>
 
 From the simulation result, I can get the probability of achieving the 12% return as below:
 >desired_return = 0.12  #Desired return (12%) <br>
@@ -54,29 +63,21 @@ From the simulation result, I can get the probability of achieving the 12% retur
 
 Probability of achieving at least a 12.0% return: **36.98%**. <br>
 
-Comparing VaR (Historical, Parametric, and Monte Carlo).<br>
-![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/3528bfcd-ef2c-47f3-9640-9c4d5a1f066b)
-
-A 95% CVaR of $16,374 means that the expected loss of the worst 5% scenarios is $16,374. <br>
-The Monte Carlo Simulation generated VaRs are slightly higher when the confidence level is higher. <br>
-However, I have no experience to justify if these variabilities are normal or acceptable.
-
 **Conclusion:**<br>
-I think Monte Carlo Simulation (MCS) is a great tool to analyze a probabilistic view of future stock prices/other events that are subject to uncertainty.
+I think Monte Carlo Simulation (MCS) is a great tool to analyze a probabilistic view of future stock prices that are subject to uncertainty.
 With MCS, I can quantify the uncertainty into a probabilistic representation and scenarios that help plan if certain things occur.<br>
 Based on this simulation, for this AAPL stock:
   1) The upside potential (profit) is higher than the downside potential (risk)
   2) There is about 37% that AAPL will return more than 12% in a year.
   3) The downside potential (VaR and CVaR) is about 8-20% of the initial investment value depending on the confidence levels.
 
-Since the probability of profit is higher than the probability of loss, I think AAPL is a good buy. However, this project is my first time calculating VaR & CVaR, I have yet to learn to make decisions based on these combined results.
-However, I think I will not buy a stock solely based on Monte Carlo Simulation result. It will work as supporting information.
+Since the probability of profit is higher than the probability of loss, I think AAPL is a good buy. This project is my first time calculating VaR & CVaR, I have yet to learn how to make decisions based on these results.
+However, I think I will not buy a stock solely based on Monte Carlo Simulation result.
 
 *References*: <br>
 https://math.gmu.edu/~tsauer/ (Numerical Analisys textbook)<br>
 https://pbpython.com/monte-carlo.html <br>
 https://medium.com/@whystudying/monte-carlo-simulation-with-python-13e09731d500 <br>
-https://www.interviewqs.com/blog/intro-monte-carlo <br>
 https://www.investopedia.com/terms/m/montecarlosimulation.asp <br>
 https://stats.libretexts.org/Bookshelves/Computing_and_Modeling/RTG%3A_Simulating_High_Dimensional_Data/The_Monte_Carlo_Simulation_Method <br>
 https://blog.quantinsti.com/value-at-risk/ <br>

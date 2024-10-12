@@ -39,8 +39,7 @@ The upside potential is about 300 (500 - 200), and the downside potential is abo
 
 With an initial investment value of 100000, I simulated the investment values using the price simulation/paths above.<br>
 In this simulation, I also calculated the VaR (VaR line below) & CVaR (or ES/Expected Shortfall).<br>
-VaR is the estimation of the maximum potential loss at specific confidence level.
-CVaR/ES = the expected loss that exceed VaR threshold.
+VaR is the estimation of the maximum potential loss at specific confidence level. CVaR/ES = the expected loss that exceed VaR threshold.<br>
 ![image](https://github.com/mahdiwf/MC_Simulation_for_Stock/assets/163992115/af3ae1c5-e870-4a0e-85fe-8a693ddcc45d)
 
 If we focus on the blue line (95% confidence level): there is 95% confidence that the worst daily loss will not exceed $12,409 or the asset has a  5% probability of losing its value by $12,409 in the upcoming days.<br>
@@ -53,7 +52,7 @@ Comparing VaR (Historical, Parametric, and Monte Carlo).<br>
 
 A 95% CVaR of $16,374 means that the expected loss (expected shortfall) of the worst 5% scenarios is $16,374. My understanding is this is the total amount of investment values that fall inside the area of Alpha = 5% in graph above. <br>
 
-With compared with Historical VaR & Parametric VaR, the Monte Carlo Simulation generated VaRs are slightly higher when the confidence level is higher. However, I have no experience to justify if these variabilities are normal or acceptable.<br>
+When compared with Historical VaR & Parametric VaR, the Monte Carlo Simulation generated VaRs are slightly higher when the confidence level is higher. However, I have no experience to justify if these variabilities are normal or acceptable.<br>
 
 From the simulation result, I can get the probability of achieving the 12% return as below:
 >desired_return = 0.12  #Desired return (12%) <br>
@@ -68,7 +67,7 @@ I think Monte Carlo Simulation (MCS) is a great tool to analyze a probabilistic 
 With MCS, I can quantify the uncertainty into a probabilistic representation and scenarios that help plan if certain things occur.<br>
 Based on this simulation, for this AAPL stock:
   1) The upside potential (profit) is higher than the downside potential (risk)
-  2) There is about 37% that AAPL will return more than 12% in a year.
+  2) There is about 37% chance that AAPL will return more than 12% in a year.
   3) The downside potential (VaR and CVaR) is about 8-20% of the initial investment value depending on the confidence levels.
 
 Since the probability of profit is higher than the probability of loss, I think AAPL is a good buy. This project is my first time calculating VaR & CVaR, I have yet to learn how to make decisions based on these results.
